@@ -2,22 +2,20 @@
 
 function convert(number) {
 
-var responses = ["Beep!", "Boop!", "I'm sorry Dave, I can't do that."];
+  var responses = ["Beep!", "Boop!", "I'm sorry Dave, I can't do that."];
 
-var numbers = [];
-// var newNumber = $("input#userInput").val();
-var splitNumbers = number.toString().split("").map(function(number){
-	return parseInt(number);
-});
- numbers.push(splitNumbers);
- // numbers = numbers.toString();
-//
-//
-//
-//   if(number%3 === 0) {
-//     alert(responses[2]);
-//   }else if (number)
-  return numbers;
+  var numbers = [];
+  // var newNumber = $("input#userInput").val();
+  var splitNumbers = number.toString().split("").map(function(number){
+  	return parseInt(number);
+  });
+   numbers.push(splitNumbers);
+
+    if (number%3 === 0) {
+       numbers = responses[2];
+    // }else if (number)
+     return numbers;
+  }
 }
 
 
