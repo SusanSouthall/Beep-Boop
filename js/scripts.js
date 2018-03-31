@@ -1,22 +1,8 @@
 // NOTE: Begins Business logic.
-//
-// function checkNumber(digit) {
-//   var numberValue = "";
-//   for (var i=0; i<digit.length; i++) {
-//     if (digit[i] === 1) {
-//       numberValue = "Boop!";
-//     }else if (digit[i] === 0) {
-//       numberValue = "Beep!";
-//     }else {
-//       numberValue = digit;
-//     }
-//   }return numberValue;
-// }
 
 function convert(number) {
 
-   var response;
-
+  var response;
   var splitNumbers = number.toString().split("").map(function(number){
   	return parseInt(number);
   });
@@ -30,12 +16,12 @@ function convert(number) {
           break;
         }else if (splitNumbers[i] === 0) {
           response = "Beep!";
+        }else {
+          response = number;
         }
     }return response;
   };
 };
-// else {
-
 
 // NOTE: Begins User Interface.
 
@@ -44,8 +30,6 @@ $(document).ready(function(){
     event.preventDefault();
 
     var userInput = $("input#userInput").val();
-
-    // results.toString();
     var userOutput = convert(userInput);
     $("#userOutput").text(userOutput);
   });
