@@ -14,8 +14,6 @@ A web application that translates a number from a user into text with the words 
 | **Program replaces a number with 0's with "Beep!"** | User input: 409 | Output: "Beep!" |
 | **Program replaces a number with 1's with "Boop!"**| User Input: 10 | Output: "Boop!" |
 | **Program replaces a number divisible by 3 with "I'm sorry Dave, I can't do that."**| Input: 33 | Output: "I'm sorry Dave, I can't do that." |
-| **Program** | Input: "" | Output: "" |
-| **Program**| Input: "" |  |
 
 ## Setup/Installation Requirements
 
