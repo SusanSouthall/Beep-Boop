@@ -28,35 +28,7 @@ function convert(number) {
 $(document).ready(function(){
   $("form#convertor").submit(function(event){
     event.preventDefault();
-
-    var userInput = $("input#userInput").val();
-    var userOutput = convert(userInput);
-    $("#userOutput").text(userOutput);
-  });
-});
-
-
-
-
-
-
-
-
-
-
-
-
-$(document).ready(function(){
-  $("form#convertor").submit(function(event){
-    event.preventDefault();
     var userNumber =  $("input#userInput").val();
-    debugger;
-    // convert(userNumber);
-    // var name = $("input#userInput").val();
-    //
-    // var numbers = [];
-    //
-    //
     var userOutput = convert(userNumber);
     $(".userOutput").text(userOutput);
 
