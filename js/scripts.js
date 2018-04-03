@@ -1,36 +1,50 @@
 // NOTE: Begins Business logic.
 
-function convert(number) {
+function checkDigits(number) {
+  var answer;
+  var num = number.toString().split("");
+  for(var i=0; i<number.length; i++) {
+    if (num[i] === "1") {
+      answer = "Boop!";
+      break;
+    }else if (num[i] === "0") {
+      answer = "Beep!";
+    }
+  } return answer;
+}
 
+function checkNumber(number) {
   var response;
-  var splitNumbers = number.toString().split("").map(function(number){
-  	return parseInt(number);
-  });
-    if (number%3 === 0 && number !== 0) {
+  var numberList = [];
+  for (var i=0; i<=number; i++) {
+    var num = i.toString();
+    if (i%3 === 0) {
       response = "I'm sorry Dave, I can't do that.";
-      return response;
+      numberList.push(response);
+    }else if (num.includes("1") === true || num.includes("0") === true) {
+      var checkOneZero = checkDigits(num);
+      response = checkOneZero;
+      numberList.push(response);
     }else {
-      for(var i=0; i<splitNumbers.length; i++) {
-        if (splitNumbers[i] === 1) {
-          response = "Boop!";
-          break;
-        }else if (splitNumbers[i] === 0) {
-          response = "Beep!";
-        }else {
-          response = number;
-        }
-    }return response;
-  };
-};
+      numberList.push(i);
+    }
+  }  return numberList;
+}
 
-// NOTE: Begins User Interface.
+// NOTE: Begins User Interface Logic.
 
 $(document).ready(function(){
   $("form#convertor").submit(function(event){
     event.preventDefault();
+    var finalNumberList = [];
     var userNumber =  $("input#userInput").val();
-    var userOutput = convert(userNumber);
-    $(".userOutput").text(userOutput);
-
+    var userOutput = checkNumber(userNumber);
+    // $("ul#userOutput").text(userOutput);
+    for (var i =0; i< userOutput.length; i++) {
+      $("#replay").click(function(){
+        window.location.reload();
+      });
+      $("ul#userOutput").append("<li>" + userOutput[i] + "</li>");
+    }
   });
 });

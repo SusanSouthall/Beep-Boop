@@ -1,3 +1,13 @@
-.center {
-  text-align: center;
+
+ h1, h3 {
+  font-family: serif;
+  color: black;
+}
+
+.margin {
+  margin-top: 60px;
+}
+
+ul {
+  color: black;
 }
