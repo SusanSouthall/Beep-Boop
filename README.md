@@ -11,9 +11,11 @@ A web application that translates a number from a user into text with the words 
 ### Specs
 | Spec | Input | Output |
 | :-------------     | :------------- | :------------- |
-| **Program replaces a number with 0's with "Beep!"** | User input: 409 | Output: "Beep!" |
-| **Program replaces a number with 1's with "Boop!"**| User Input: 10 | Output: "Boop!" |
+| **Program replaces a 0  with "Beep!"** | User input: 0 | Output: "Beep!" |
+| **Program replaces a 1 with "Boop!"**| User Input: 1 | Output: "Boop!" |
 | **Program replaces a number divisible by 3 with "I'm sorry Dave, I can't do that."**| Input: 33 | Output: "I'm sorry Dave, I can't do that." |
+| **If a number has both a one and a zero, the response "Boop!" will be shown. | User input: 10 | Output: "Boop!" |
+| **Any number with a zero, not divisible by 3, will give the response "Beep!" | User input: 20 | Output: "Beep!" |
 
 ## Setup/Installation Requirements
 
