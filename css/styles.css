@@ -5,9 +5,12 @@
 }
 
 .margin {
-  margin-top: 60px;
+  margin-top: 75px;
 }
 
 ul {
   color: black;
+}
+row {
+  height: auto;
 }

@@ -18,7 +18,7 @@ function checkNumber(number) {
   var numberList = [];
   for (var i=0; i<=number; i++) {
     var num = i.toString();
-    if (i%3 === 0) {
+    if (i%3 === 0 && i !== 0) {
       response = "I'm sorry Dave, I can't do that.";
       numberList.push(response);
     }else if (num.includes("1") === true || num.includes("0") === true) {
@@ -28,7 +28,7 @@ function checkNumber(number) {
     }else {
       numberList.push(i);
     }
-  }  return numberList;
+  }return numberList;
 }
 
 // NOTE: Begins User Interface Logic.
@@ -39,12 +39,11 @@ $(document).ready(function(){
     var finalNumberList = [];
     var userNumber =  $("input#userInput").val();
     var userOutput = checkNumber(userNumber);
-    // $("ul#userOutput").text(userOutput);
-    for (var i =0; i< userOutput.length; i++) {
+     for (var i =0; i< userOutput.length; i++) {
       $("#replay").click(function(){
         window.location.reload();
-      });
+    });
       $("ul#userOutput").append("<li>" + userOutput[i] + "</li>");
-    }
+    };
   });
 });
